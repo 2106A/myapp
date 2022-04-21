@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h2>111222</h2>
+    <div class="box">
+        <div class="box1">
+            <!-- <div class="box11" style="display: block;"> -->
+                <img class="imgss" src="./image/big_1.jpg" alt="">
+            <!-- </div> -->
+            <!-- <div class="box11">
+                <img src="./image/big_2.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_3.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_4.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_5.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_6.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_7.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_8.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_9.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_10.jpg" alt="">
+            </div>
+            <div class="box11">
+                <img src="./image/big_11.jpg" alt="">
+            </div> -->
+        </div>
+        <img class="imgs" src="./image/small_1.jpg" alt="">
+
+        <img class="imgs" src="./image/small_2.jpg" alt="">
+
+        <img class="imgs" src="./image/small_3.jpg" alt="">
+
+        <img class="imgs" src="./image/small_4.jpg" alt="">
+
+        <img class="imgs" src="./image/small_5.jpg" alt="">
+
+        <img class="imgs" src="./image/small_6.jpg" alt="">
+
+        <img class="imgs" src="./image/small_7.jpg" alt="">
+
+        <img class="imgs" src="./image/small_8.jpg" alt="">
+
+        <img class="imgs" src="./image/small_9.jpg" alt="">
+
+        <img class="imgs" src="./image/small_10.jpg" alt="">
+
+        <img class="imgs" src="./image/small_11.jpg" alt="">
+
+    </div>
+    </div>
 </body>
+<script>
+    var imgs = document.querySelectorAll('.imgs')
+    var imgss = document.querySelector('.imgss')
+    for(var i = 0 ; i < imgs.length ; i++){
+        imgs[i].index = i
+        imgs[i].onmouseover = function(){
+            imgss.src = `./image/big_${this.index+1}.jpg`
+            console.log(this.index)
+        }
+    }
+</script>
 </html>
+<style>
+    body {
+        background: #000;
+    }
+
+    .box {
+        height: 270px;
+        background: #fff;
+        width: 216px;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 10px;
+        /* float: left; */
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+    }
+
+    /* .box1 {
+        width: 155px;
+        height: 155px;
+    } */
+
+    img {
+        border-radius: 5px;
+        margin: 2px;
+        float: left;
+    }
+
+    /* .box11 {
+        display: none;
+    } */
+
+    /* .box2 {
+        float: left;
+    }
+
+    .box21 {
+        width: 50px;
+        height: 50px;
+        float: left;
+    } */
+    
+</style>
