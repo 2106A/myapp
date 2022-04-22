@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: .28rem;
+    min-width: 3.4rem;
+    max-width: 7.5rem;
+    background: rgb(248, 247, 247);
+}
+
+.box {
+    margin-bottom: 2.4rem;
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 .4rem;
+        line-height: 1rem;
+        font-size: .4rem;
+        background: #fff;
+
+        img {
+            width: .36rem;
+            height: .36rem;
+        }
+    }
+
+    .box1 {
+        width: 100%;
+
+        p {
+            line-height: 1rem;
+            font-size: .4rem;
+            padding: 0 .4rem;
+        }
+
+        .box11 {
+            background: #fff;
+            padding: 0 .4rem;
+            line-height: 1rem;
+            font-size: .36rem;
+
+            div {
+                border-bottom: .01rem #ddd solid;
+            }
+
+            .box110 {
+                border: none;
+            }
+
+            b {
+                color: red;
+            }
+
+            input {
+                border: 0;
+                font-size: .34rem;
+                margin-left: .3rem;
+            }
+
+            img {
+                width: .26rem;
+                height: .26rem;
+            }
+        }
+    }
+}
+
+.box2 {
+    width: 100%;
+    background: #fff;
+    margin-top: .2rem;
+    padding: 0 .4rem;
+    font-size: .36rem;
+    .box21 {
+        line-height: 1rem;
+        border-bottom: .01rem #ddd solid;
+        input {
+            border: 0;
+            font-size: .34rem;
+            margin-left: .3rem;
+        }
+        img {
+            width: .26rem;
+            height: .26rem;
+        }
+    }
+    .box211{
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .box22 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: .2rem 0;
+
+        p {
+            width: 23%;
+            border: 1px #ddd solid;
+            border-radius: .1rem;
+            background: #fff;
+            font-size: .34rem;
+            color: #999;
+            text-align: center;
+            line-height: .8rem;
+            margin:.1rem 0; 
+        }
+    }
+    .box23{
+        width: .9rem;
+        height: .4rem;
+        border-radius: .2rem;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        b{
+            display: inline-block;
+            width: .5rem;
+            height: .5rem;
+            background: rgb(243, 243, 243);
+            border-radius: .25rem;
+            box-shadow: 0 0 5px #eee;
+        }
+    }
+}
+.tab{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: .4rem;
+    border-top: .01rem #eee solid;
+    button{
+        width: 98%;
+        line-height: 1rem;
+        background: #44d5b1;
+        border-radius: .2rem;
+        color: #fff;
+        text-align: center;
+        border: 0;
+        font-size: .36rem;
+    }
+}

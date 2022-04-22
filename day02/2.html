@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn">输入法</button>
+    <ul class="list">
+        <li class="li">简写</li>
+        <li class="li">拼音</li>
+        <li class="out li">关闭</li>
+    </ul>
+</body>
+<script>
+    var btn = document.querySelector('.btn')
+    var list = document.querySelector('.list')
+    var out = document.querySelector(".out")
+    var lis = document.querySelectorAll('.li')
+    
+    out.onclick = function () {
+        list.style.display = 'none'
+    }
+    btn.onclick = function () {
+        if(list.style.display != 'block'){
+            list.style.display = 'block'
+        }else{
+            out.onclick()
+        }
+    }
+
+
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.style.background = 'red'
+        }
+        lis[i].onmouseout = function () {
+            this.style.background = ''
+        }
+    }
+    
+
+
+   
+    
+
+</script>
+
+</html>
+<style>
+    * {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        border: 1px #000 solid;
+        width: 50px;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .btn {
+        margin: 20px 0;
+    }
+
+    li {
+        width: 50px;
+        line-height: 20px;
+    }
+
+    .out {
+        border-top: 1px #000 solid;
+    }
+</style>
