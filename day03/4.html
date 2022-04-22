@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <span>属性名 : </span>
+        <input type="text" value="background">
+    </p>
+    <p>
+        <span>属性值 : </span>
+        <input type="text" value="red">
+    </p>
+    <button class="qd">确定</button>
+    <button class="cz">重置</button>
+    <div class="box">
+        <span>
+            在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。
+        </span>
+    </div>
+</body>
+<script>
+    var inps = document.querySelectorAll('input')
+    var qd = document.querySelector('.qd')
+    var cz = document.querySelector('.cz')
+    var box = document.querySelector('.box')
+    qd.onclick = function () {
+        var x = inps[0].value
+        var y = inps[1].value
+        console.log(x, y)
+        box.style[x] = y
+    }
+
+    cz.onclick = function(){
+        box.style = ''
+    }
+</script>
+
+</html>
+<style>
+    body {
+        text-align: center;
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        background: #000;
+        color: #fff;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+</style>
