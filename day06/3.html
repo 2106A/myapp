@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="qx">
+            <input class="inp" type="checkbox" name="" id="">
+            <span>全选</span>
+            <span style="display: none;">全不选</span>
+            <small style="color:royalblue" class="fx">反选</small>
+        </div>
+        <ul>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(1)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(2)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(3)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(4)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(5)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(6)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(7)
+            </li>
+            <li>
+                <input class="check" type="checkbox" name="" id="">
+                选项(8)
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var qx = document.querySelector(".qx input")
+    var fxs = document.querySelectorAll("li input")
+
+    qx.onclick = function () {
+        fxs.forEach(function (item) {
+            item.checked = qx.checked
+        })
+    }
+
+    fxs.forEach(function (item, index) {
+        item.onclick = function () {
+            fn()
+        }
+    })
+
+    var fx = document.querySelector(".fx")
+    fx.onclick = function () {
+        for (var i = 0; i < fxs.length; i++) {
+            fxs[i].checked = !fxs[i].checked
+        }
+        fn()
+    }
+
+    //筛选出为真的值 组成一个新的数组  之后判断新的数组的长度 与原来数组的长度是否一致 如果一致 选中  不一致 不选中
+
+    function fn() {
+        let arr = []
+        for (var i = 0; i < fxs.length; i++) {
+            if (fxs[i].checked) {
+                arr.push(fxs[i])
+            }
+        }
+        if (arr.length == fxs.length) {
+            qx.checked = true
+        } else {
+            qx.checked = false
+        }
+    }
+</script>
+
+</html>
+<style>
+    .box {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+</style>
