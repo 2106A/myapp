@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input class="inp" type="text" name="" id="" value="1,2,3">
+        <span>
+            输入数字求和，数字之间用半角","号分隔
+        </span>
+        <p>
+            <button class="btn">求和</button>
+            <span class="sp"></span>
+        </p>
+    </div>
+</body>
+<script>
+    var inp = document.querySelector('.inp')
+    console.log(inp);
+    // let arr = new JSON.parse(inp)
+    // console.log(arr);
+    var btn = document.querySelector('.btn')
+    var sp = document.querySelector('.sp')
+    btn.onclick = function () {
+        num = inp.value
+        console.log(num)
+        getsum(num)
+
+    }
+    function getsum(num) {
+        let str = num.split(',')
+        console.log(str)
+        var sum = 0
+        for (var i = 0; i < str.length; i++) {
+            sum += parseInt(str[i])
+            console.log(sum);
+        }
+        sp.innerHTML = sum
+    }
+
+
+
+
+</script>
+
+</html>
+<style>
+    div {
+        width: 400px;
+        margin: 0 auto;
+        font-size: 12px;
+        margin-top: 50px;
+    }
+</style>
