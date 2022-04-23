@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 3.5rem;
+    max-width: 7.5rem;
+    background: rgb(250, 250, 250);
+    font-size: .3rem;
+    padding-bottom: 2rem;
+}
+.box1{
+    width: 100%;
+    background: #fff;
+    header{
+        display: flex;
+        justify-content: space-between;
+        line-height: .8rem;
+        align-items: center;
+        padding: 0 .3rem;
+        p{
+            font-size: .36rem;
+        }
+        span{
+            width: 20%;
+            font-size: .28rem;
+            color: rgb(101, 233, 200);
+        }
+        img{
+            width: .3rem;
+            height: .3rem;
+        }
+    }
+}
+.box2{
+    background: rgb(246, 218, 126);
+    line-height: .6rem;
+    padding: 0 .3rem;
+    display: flex;
+    align-items: center;
+    img{
+        width: .36rem;
+        height: .36rem;
+        margin-right: .2rem;
+    }
+    span{
+        color: #fff;
+        font-size: .26rem;
+    }
+}
+.box3{
+    width: 100%;
+    padding: 0 .3rem;
+    header{
+        line-height: 1rem;
+        font-size: .4rem;
+    }
+    .box31{
+        background: #fff;
+        border-radius: .2rem;
+        padding: .4rem;
+        div{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            line-height: .8rem;
+            span{
+                width: 25%;
+                color: #999;
+                margin-right: .16rem;
+                font-size: .28rem;
+            }
+            p{
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+.fix{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 .4rem;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    .sp1{
+        display: inline-block;
+        width: 48%;
+        height: .8rem;
+        border: .01rem red solid;
+        text-align: center;
+        line-height: .8rem;
+        font-size: .36rem;
+        color: red;
+        border-radius: .16rem;
+        font-weight: lighter;
+    }
+    .sp2{
+        display: inline-block;
+        width: 48%;
+        height: .8rem;
+        border: .01rem rgb(63, 202, 163) solid;
+        background: rgb(63, 202, 163);
+        text-align: center;
+        line-height: .8rem;
+        font-size: .36rem;
+        color: #fff;
+        border-radius: .16rem;
+        font-weight: lighter;
+    }
+}

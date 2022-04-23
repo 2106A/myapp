@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 3.5rem;
+  max-width: 7.5rem;
+  background: #fafafa;
+  font-size: .3rem;
+  padding-bottom: 2rem;
+}
+
+.box1 {
+  width: 100%;
+  background: #fff;
+}
+
+.box1 header {
+  display: flex;
+  justify-content: space-between;
+  line-height: .8rem;
+  align-items: center;
+  padding: 0 .3rem;
+}
+
+.box1 header p {
+  font-size: .36rem;
+}
+
+.box1 header span {
+  width: 20%;
+  font-size: .28rem;
+  color: #65e9c8;
+}
+
+.box1 header img {
+  width: .3rem;
+  height: .3rem;
+}
+
+.box2 {
+  background: #f6da7e;
+  line-height: .6rem;
+  padding: 0 .3rem;
+  display: flex;
+  align-items: center;
+}
+
+.box2 img {
+  width: .36rem;
+  height: .36rem;
+  margin-right: .2rem;
+}
+
+.box2 span {
+  color: #fff;
+  font-size: .26rem;
+}
+
+.box3 {
+  width: 100%;
+  padding: 0 .3rem;
+}
+
+.box3 header {
+  line-height: 1rem;
+  font-size: .4rem;
+}
+
+.box3 .box31 {
+  background: #fff;
+  border-radius: .2rem;
+  padding: .4rem;
+}
+
+.box3 .box31 div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  line-height: .8rem;
+}
+
+.box3 .box31 div span {
+  width: 25%;
+  color: #999;
+  margin-right: .16rem;
+  font-size: .28rem;
+}
+
+.box3 .box31 div p {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 0 .4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.5rem;
+}
+
+.fix .sp1 {
+  display: inline-block;
+  width: 48%;
+  height: .8rem;
+  border: .01rem red solid;
+  text-align: center;
+  line-height: .8rem;
+  font-size: .36rem;
+  color: red;
+  border-radius: .16rem;
+  font-weight: lighter;
+}
+
+.fix .sp2 {
+  display: inline-block;
+  width: 48%;
+  height: .8rem;
+  border: 0.01rem #3fcaa3 solid;
+  background: #3fcaa3;
+  text-align: center;
+  line-height: .8rem;
+  font-size: .36rem;
+  color: #fff;
+  border-radius: .16rem;
+  font-weight: lighter;
+}

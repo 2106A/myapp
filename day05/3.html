@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="nav">
+            <span class="sp act">第一节课</span>
+            <span class="sp">第二节课</span>
+            <span class="sp">第三节课</span>
+        </div>
+        <div class="box1" style="display: block;">
+            <ul class="uls">
+                <li>网页特效原理分析1</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+            </ul>
+        </div>
+        <div class="box1">
+            <ul class="uls">
+                <li>网页特效原理分析2</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+            </ul>
+        </div>
+        <div class="box1">
+            <ul class="uls">
+                <li>网页特效原理分析3</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+                <li>网页特效原理分析</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var spans = document.querySelectorAll('.sp')
+    var boxs = document.querySelectorAll('.box1')
+    for(var i = 0 ; i < spans.length ; i++){
+        spans[i].index = i
+        spans[i].onmouseover = function(){
+            for(var j = 0 ; j < boxs.length ; j++){
+                console.log(j)
+                spans[j].className = ''
+                boxs[j].style.display = 'none'
+            }
+            console.log(i);
+            this.className = 'act'
+            boxs[this.index].style.display = 'block'
+        }
+    }
+</script>
+</html>
+<style>
+    .box {
+        width: 50%;
+        margin: 0 auto;
+        border: 1px #000 solid;
+    }
+
+    .nav {
+        background: #000;
+        color: #fff;
+    }
+    span{
+        display: inline-block;
+        width: 20%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .box1 {
+        display: none;
+    }
+    .act{
+        background: #fff;
+        color: #000;
+        border-bottom: 1px #000 solid;
+    }
+</style>

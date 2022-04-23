@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <p class="p1">
+            <span>播放列表……</span>
+            <b class="b1"></b>
+        </p>
+        <div class="box0">
+            <div class="box1">歌名1</div>
+            <div class="box1">歌名2</div>
+            <div class="box1">歌名3</div>
+            <div class="box1">歌名4</div>
+            <div class="box1">歌名5</div>
+            <div class="box1">歌名6</div>
+        </div>
+    </div>
+</body>
+<script>
+    var p1 = document.querySelector('.p1')
+    var b1 = document.querySelector('.b1')
+    var box = document.querySelector('.box0')
+    var boxs = document.querySelectorAll('.box1')
+
+    p1.onclick = function () {
+        if (box.style.display != 'block'){
+            box.style.display = 'block'
+            b1.style.transform='rotate(180deg)'
+        }else{
+            box.style.display = 'none'
+            b1.style.transform=''
+        }
+    }
+
+    for(var i = 0 ; i < boxs.length ; i++){
+        boxs[i].onmouseover = function(){
+            for(var j = 0 ; j < boxs.length ; j++){
+                boxs[j].style.background = ''
+            }
+            this.style.background = '#fff'
+        }
+
+        boxs[i].onmouseout = function(){
+            for(var j = 0 ; j < boxs.length ; j++){
+                boxs[j].style.background = ''
+            }
+        }
+    }
+</script>
+
+</html>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    b {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #000;
+        /* transform: rotate(360deg); */
+    }
+    .box0{
+        display: none;
+    }
+    .box {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px #333 solid;
+    }
+
+    p {
+        background: rgb(194, 209, 213);
+        padding: 10px;
+        border-bottom: 1px #333 solid;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .box1 {
+        background: rgb(214, 228, 232);
+        border-bottom: 1px #fff solid;
+    }
+
+    .act {
+        background: #fff;
+    }
+</style>
